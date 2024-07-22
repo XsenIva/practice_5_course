@@ -12,12 +12,6 @@
   \label{fig:101}
 \end{figure}
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=1\textwidth]{pict/prac/54}
-  \caption{}
-\end{figure}
-
 В домене создадим подразделения соответствующие варианту, а также на одном уровне с ними создадим 
 главного пользователя.
 
@@ -89,7 +83,7 @@
   \caption{Запрет гостевой учетной записи}
 \end{figure}
 
-Проверим работ предыдущей политики.
+Проверим работу предыдущей политики, войдем в гостевую запись.
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{pict/prac/65}
@@ -101,6 +95,21 @@
   \includegraphics[width=1\textwidth]{pict/prac/66}
   \caption{Реакция системы на вход гостя}
 \end{figure}
+
+Также настроим политики блокировки учетной записи, при неправильном вводе пароля.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{pict/prac/71}
+  \caption{Политики блокировки}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{pict/prac/79}
+  \caption{Реакция системы на неправильный пароль}
+\end{figure}
+
+
 
 Аналогично создадим всех остальных пользователей для каждого подразделения.
 
@@ -129,7 +138,7 @@
 \end{figure}
 
 
-Также создадим в каждом подразделении будет сетевой ресурс, указывающий на общую папку.
+Также создадим в каждом подразделении сетевой ресурс, указывающий на общую папку.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.9\textwidth]{pict/prac/7}
@@ -157,7 +166,7 @@
  что отвечает требованию к классу защищенности СВТ по ограничению прав для пользователей.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{pict/prac/9}
+    \includegraphics[width=0.8\textwidth]{pict/prac/9}
     \caption{Права на папку сотрудника}
     \label{fig:21}
 \end{figure}
@@ -187,7 +196,7 @@
 Зайдем в учетную запись работника кадров, проверим доступность.
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.9\textwidth]{pict/prac/25}
+  \includegraphics[width=1\textwidth]{pict/prac/25}
   \caption{Аккаунт работника кадров}
   \label{fig:24}
 \end{figure}
@@ -230,6 +239,12 @@
   \label{fig:27}
 \end{figure}
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{pict/prac/62}
+  \caption{Попытка поменять права}
+\end{figure}
+
 
 \begin{figure}[H]
   \centering
@@ -265,7 +280,12 @@
   \centering
   \includegraphics[width=1\textwidth]{pict/prac/35}
   \caption{Начальник соискателей -> Работник соискателей}
-  \label{fig:34}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{pict/prac/69}
+  \caption{Попытка поменять права на папку своего работника}
 \end{figure}
 
 \begin{figure}[H]
@@ -314,6 +334,13 @@
 
 \begin{figure}[H]
   \centering
+  \includegraphics[width=1\textwidth]{pict/prac/70}
+  \caption{Попытка поменять права на общую папку}
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering
   \includegraphics[width=1\textwidth]{pict/prac/44}
   \caption{Отказ в изменении файла}
   \label{fig:43}
@@ -339,5 +366,18 @@
   \includegraphics[width=1\textwidth]{pict/prac/47}
   \caption{Главный менеджер -> Главный менеджер}
   \label{fig:46}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{pict/prac/76}
+  \caption{Главный менеджер -> Общая папка}
+\end{figure}
+Попробуем поменять доступ к файлу в общей папке от лица главного менеджера.
+Он может посмотреть права доступа к общей папке, но изменить их он не может.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{pict/prac/78}
+  \caption{Попытка изменить доступ в общей папке}
 \end{figure}
 

@@ -50,11 +50,7 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{fancyvrb}
-\usepackage{listings}
 \usepackage{listingsutf8}
-\usepackage{longtable}
-\usepackage{array}
-\usepackage{listings}
 
 \usepackage[english,russian]{babel}
 
@@ -142,7 +138,7 @@
 \intro
 \input{sections/intro.tex}
 
-\section{Аппаратно-программный модуль доверенной загрузки}
+\section{Аппаратно"=программный модуль доверенной загрузки}
 \input{sections/theory2.tex}
 
 \section{Настройка подсистемы}
@@ -151,10 +147,12 @@
 
 
 % \addcontentsline{toc}{section}{\hspace{15mm}ЗАКЛЮЧЕНИЕ}
-\section{ЗАКЛЮЧЕНИЕ}
+\section*{ЗАКЛЮЧЕНИЕ}
+\addcontentsline{toc}{section}{ЗАКЛЮЧЕНИЕ}
 \input{sections/conclusion.tex}
 
-\section{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+\section*{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+\addcontentsline{toc}{section}{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
 % \input{sections/istoch.tex}
 % \section{Приложение А}
 % \section{Приложение Б}
