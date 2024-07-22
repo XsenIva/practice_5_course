@@ -1,0 +1,163 @@
+\documentclass[spec, och, pract, times]{shiza}
+% параметр - тип обучения - одно из значений:
+%    spec     - специальность
+%    bachelor - бакалавриат (по умолчанию)
+%    master   - магистратура
+% параметр - форма обучения - одно из значений:
+%    och   - очное (по умолчанию)
+%    zaoch - заочное
+% параметр - тип работы - одно из значений:
+%    referat    - реферат
+%    coursework - курсовая работа (по умолчанию)
+%    diploma    - дипломная работа
+%    pract      - отчет по практике
+% параметр - включение шрифта
+%    times    - включение шрифта Times New Roman (если установлен)
+%               по умолчанию выключен
+
+\usepackage{subfigure}
+\usepackage{tikz,pgfplots}
+\pgfplotsset{compat=1.5}
+\usepackage{float}
+\usepackage{minted}
+\usepackage{ragged2e}
+\justifying
+%\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+%\titleformat{\paragraph}
+%{\normalfont\normalsize}{\theparagraph}{1em}{}
+%\titlespacing*{\paragraph}
+%{35.5pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\titleformat{\paragraph}[block]
+{\hspace{1.25cm}\normalfont}
+{\theparagraph}{1ex}{}
+\titlespacing{\paragraph}
+{0cm}{2ex plus 1ex minus .2ex}{.4ex plus.2ex}
+\renewcommand{\baselinestretch}{1.5}
+
+% -----------------------------------------------------------------------------%
+
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{tempora}
+
+\usepackage[sort,compress]{cite}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{fancyvrb}
+\usepackage{listings}
+\usepackage{listingsutf8}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{listings}
+
+\usepackage[english,russian]{babel}
+
+%\usepackage[colorlinks=true]{hyperref}
+\usepackage{url}
+\newcommand{\eqdef}{\stackrel {\rm def}{=}}
+
+
+\newtheorem{lem}{Лемма}
+
+\begin{document}
+
+% Кафедра (в родительном падеже)
+\chair{теоретических основ компьютерной безопасности и криптографии}
+
+% Тема работы
+\title{отчет}
+
+% Курс
+\course{четвертый}
+
+% Группа
+\group{431}
+
+% Факультет (в родительном падеже) (по умолчанию "факультета КНиИТ")
+\department{факультета компьютерных наук и информационных технологий}
+
+% Специальность/направление код - наименование
+%\napravlenie{09.03.04 "--- Программная инженерия}
+%\napravlenie{010500 "--- МОАИС}
+%\napravlenie{230100 "--- Информатика и вычислительная техника}
+%\napravlenie{231000 "--- Программная инженерия}
+\napravlenie{090301 "--- Компьютерная безопасность}
+
+% Для студентки. Для работы студента следующая команда не нужна.
+% \studenttitle{Студентки}
+
+% Фамилия, имя, отчество в родительном падеже
+\author{Иванова Ксения Владиславовна}
+
+% Заведующий кафедрой
+\chtitle{д.~ф.-м.~н.,~доцент} % степень, звание
+\chname{М.~Б.~Абросимов}
+
+%Научный руководитель (для реферата преподаватель проверяющий работу)
+\satitle{доцент} %должность, степень, звание
+\saname{А.~В.~Гортинский}
+
+% Руководитель практики от организации (только для практики,
+% для остальных типов работ не используется)
+% \patitle{к.ф.-м.н.}
+% \paname{С.~В.~Миронов}
+
+% Семестр (только для практики, для остальных
+% типов работ не используется)
+\term{восьмой}
+
+% Наименование практики (только для практики, для остальных
+% типов работ не используется)
+% \practtype{Ознакомительная}
+
+% Продолжительность практики (количество недель) (только для практики,
+% для остальных типов работ не используется)
+% \duration{2}
+
+% Даты начала и окончания практики (только для практики, для остальных
+% типов работ не используется)
+% \practStart{22 июня 2020}
+% \practFinish{05 июля 2020}
+
+% Год выполнения отчета
+\date{2024}
+
+\maketitle
+
+% Включение нумерации рисунков, формул и таблиц по разделам
+% (по умолчанию - нумерация сквозная)
+% (допускается оба вида нумерации)
+% \secNumbering
+
+%------------------------------------------------------------------------------%
+
+\tableofcontents
+
+\intro
+\input{sections/intro.tex}
+
+\section{Аппаратно-программный модуль доверенной загрузки}
+\input{sections/theory2.tex}
+
+\section{Настройка подсистемы}
+\input{sections/theory1.tex}
+\input{sections/practice.tex}
+
+
+% \addcontentsline{toc}{section}{\hspace{15mm}ЗАКЛЮЧЕНИЕ}
+\section{ЗАКЛЮЧЕНИЕ}
+\input{sections/conclusion.tex}
+
+\section{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+% \input{sections/istoch.tex}
+% \section{Приложение А}
+% \section{Приложение Б}
+% \input{sections/bibloig.tex}
+
+\end{document}
